@@ -7,17 +7,17 @@ const string
 const string
     nameGunPrefix = "25cm RaK 6 l/40";  //prefix shared by guns
 const uint
-    gunCount = 24;  //number of guns, numbered 1..Count
+    gunCount = 24;  //number of guns, numbered 0..Count
 //Expect Gun names of the form
 //  <Name> ::= <prefix> <Id>
-//  <Id> ::= <integer range 1..gunCount>
+//  <Id> ::= <integer range 0..gunCount>
 //e.g. First gun to fire
 //25cm RaK 6 l/40 1
 
 const float //radians 0..2pi ; converted from degrees
-    angleTarget = 0.0f * (Pi / 180.0f),   //angle at which the gun should fire
-    angleTolerance = 2.0f * (Pi / 180.0f);   //allow guns to fire within this error of the target
-                                             //-recommended ~1.5 degrees for 30rpm Drive
+    angleTarget = 0.0f * (Pi / 180.0f),     //angle at which the gun should fire
+    angleTolerance = 2.0f * (Pi / 180.0f);  //allow guns to fire within this error of the target
+                                            //-recommended ~1.5 degrees for 30rpm Drive
 
 
 //Definitions
