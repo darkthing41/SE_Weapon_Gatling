@@ -229,7 +229,7 @@ namespace SpaceEngineersScripting
 			//-check that it is correctly aligned
 			if (indexGun != status.indexGunLast) {
 				float
-					angleError = Math.Abs(angleTrue -indexGun*angleGun);
+					angleError = Math.Abs(NormaliseRadians_Pi(angleTrue -indexGun*angleGun));
 
 				if (angleError < angleTolerance) {
 					guns[indexGun].ApplyAction ("ShootOnce");
