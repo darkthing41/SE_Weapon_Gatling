@@ -326,7 +326,7 @@ namespace SpaceEngineersScripting
 					return false;
 				}
 				//Check that the found Gun is operable
-				if ( !ValidateBlock(guns[i]) )
+				if ( !ValidateBlock(guns[i], callbackRequired:false) )
 					return false;
 			}
 
